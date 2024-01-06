@@ -30,7 +30,7 @@ jobs:
     - name: Build Docker Image
       run: |
         docker build -t fjerez/docker-graphql:v2 .
-        docker build -t fjerez/docker-graphql:latest
+        docker build -t fjerez/docker-graphql:latest .
 
     - name: push Docker Image
       run: |
