@@ -40,14 +40,14 @@ jobs:
       env: 
         NEW_VERSION: ${{ steps.version.outputs.version }}
       run: |
-        docker build -t fjerez/docker-graphql:v2 .
+        docker build -t fjerez/docker-graphql:$NEW_VERSION .
         docker build -t fjerez/docker-graphql:latest .
 
     - name: push Docker Image
       env:
         NEW_VERSION: ${{ steps.version.outputs.version }}
       run: |
-        docker push fjerez/docker-graphql:v2
+        docker push fjerez/docker-graphql:$NEW_VERSION
         docker push fjerez/docker-graphql:latest
     
 
